@@ -16,6 +16,7 @@ use crate::types::price::{Price, TimestampedPrice};
 pub enum Exchange {
     Binance,
     Coinbase,
+    Hyperliquid,
     Kraken,
     Okx,
     UniswapV3,
@@ -28,6 +29,7 @@ impl Exchange {
         vec![
             Exchange::Binance,
             Exchange::Coinbase,
+            Exchange::Hyperliquid,
             Exchange::Kraken,
             Exchange::Okx,
             Exchange::UniswapV3,
@@ -41,6 +43,7 @@ impl Display for Exchange {
         let fmt_str = match self {
             Exchange::Binance => String::from("binance"),
             Exchange::Coinbase => String::from("coinbase"),
+            Exchange::Hyperliquid => String::from("hyperliquid"),
             Exchange::Kraken => String::from("kraken"),
             Exchange::Okx => String::from("okx"),
             Exchange::UniswapV3 => String::from("uniswapv3"),
@@ -57,6 +60,7 @@ impl FromStr for Exchange {
         match s {
             "binance" => Ok(Exchange::Binance),
             "coinbase" => Ok(Exchange::Coinbase),
+            "hyperliquid" => Ok(Exchange::Hyperliquid),
             "kraken" => Ok(Exchange::Kraken),
             "okx" => Ok(Exchange::Okx),
             "uniswapv3" | "uniswap" => Ok(Exchange::UniswapV3),

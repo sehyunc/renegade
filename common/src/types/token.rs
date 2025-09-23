@@ -369,6 +369,7 @@ pub fn default_exchange_stable(exchange: &Exchange) -> Token {
     match exchange {
         Exchange::Binance => Token::from_ticker(USDT_TICKER),
         Exchange::Coinbase => Token::from_ticker(USD_TICKER),
+        Exchange::Hyperliquid => Token::from_ticker(USDC_TICKER),
         Exchange::Kraken => Token::from_ticker(USD_TICKER),
         Exchange::Okx => Token::from_ticker(USDT_TICKER),
         Exchange::Renegade => Token::from_ticker(USDC_TICKER),
