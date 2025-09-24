@@ -16,7 +16,7 @@ use serde::{Deserialize, Serialize};
 use util::raw_err_str;
 
 /// The base URL for raw token remap files
-const REMAP_BASE_URL: &str = "https://raw.githubusercontent.com/renegade-fi/token-mappings/main/";
+const REMAP_BASE_URL: &str = "https://raw.githubusercontent.com/sehyunc/token-mappings/main/";
 
 /// The zero address, used for the dummy "USD" token
 const ZERO_ADDRESS: &str = "0x0000000000000000000000000000000000000000";
